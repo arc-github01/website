@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-image: url("background.jpeg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+
+        .topnav {
+            overflow: hidden;
+            background-color: #333;
+            border-bottom: solid 1px #000;
+        }
+
+        .topnav a {
+            float: left;
+            display: block;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 10px 16px;
+            text-decoration: none;
+            transition: transform 0.2s ease-in-out;
+        }
+
+        .topnav .logo {
+            font-weight: bold;
+            font-size: 24px;
+        }
+
+        .topnav a:nth-child(2),
+        .topnav a:nth-child(3),
+        .topnav a:nth-child(4),
+        .topnav a:nth-child(5) {
+            margin-left: auto;
+        }
+
+        .main-content {
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .my-works-button {
+            background-color: #333;
+            color: #959595;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+
+        .my-works-button:hover {
+            transform: scale(1.05);
+        }
+
+        img[src="compicon.png"] {
+            transition: transform 0.3s ease-in-out;
+        }
+
+        img[src="compicon.png"]:hover {
+            transform: scale(1.1);
+        }
+
+        .topnav a:hover {
+            transform: scale(1.1);
+        }
+
+        .blog-image {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 20px auto;
+        }
+
+        .blog-image img {
+            max-width: 25%; /* Adjust the size as needed */
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="topnav">
+        <a href="index.html" class="logo">arc90</a>
+        <a href="blogpage.html">Blog</a>
+        <a href="#about" class="my-works-button">My Works</a>
+        <a href="https://www.linkedin.com/in/aryan-kumar-029abb289?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank">LinkedIn</a>
+        <a href="#discord">Discord</a>
+    </div>
+    <div class="blog-image">
+        <img src="blog.png" alt="Blog Image">
+    </div>
+    <div class="main-content">
+        <br>
+        <br>
+        <br>
+        <br>
+        <div class="blog-post">
+            <hr>
+            <h2>Blog #1</h2>
+            <h3>How I Built this site</h3>
+            <hr>
+            
+        </div>
+
+        <div class="blog-post">
+            <h2>Research #2</h2>
+            <h3>Lorem ipsum Dolor</h3>
+            <hr>
+        </div>
+        <!-- Add more blog posts here -->
+    </div>
+</body>
+</html>
