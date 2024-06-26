@@ -67,7 +67,32 @@
 
        .topnav a:hover {
             transform: scale(1.1);
-        }      
+        } 
+        
+        .blog-image {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 20px auto;
+        }
+
+        .blog-image img {
+            max-width: 25%; /* Adjust the size as needed */
+            height: auto;
+        }
+        
+        .dropbtn {
+            background-color: #333; /* Button color */
+         color: #fff; /* Text color */
+         padding: 10px 0px;
+         border-radius: 5px;
+         text-decoration: none;
+         border: none; /* Remove button border */
+         box-shadow: none; /* Remove button shadow */
+         font-size: 24px; /* Keep this to make lines thicker */
+         line-height: 1; /* Reset line height to make lines longer */
+         width: 40px; /* Increase width to make lines longer */
+        }
 
        .dropdown {
             position: relative;
@@ -96,17 +121,7 @@
             background-color: #555;
         }
 
-        .blog-image {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin: 20px auto;
-        }
-
-        .blog-image img {
-            max-width: 25%; /* Adjust the size as needed */
-            height: auto;
-        }
+        
 
        .show {
             display: block;
@@ -114,8 +129,8 @@
 
        .dropdown-container {
             position: absolute;
-            right: 0px;
-            top: 7px
+            right: 10px;
+            top: -5px
         }
 
         @media (max-width: 768px) {
