@@ -11,13 +11,14 @@
             background-attachment: fixed;
         }
 
-        .topnav {
+       .topnav {
             overflow: hidden;
             background-color: #333;
             border-bottom: solid 1px #000;
+            position: relative; /* Added to support absolute positioning of dropdown */
         }
 
-        .topnav a {
+       .topnav a {
             float: left;
             display: block;
             color: #f2f2f2;
@@ -27,24 +28,24 @@
             transition: transform 0.2s ease-in-out;
         }
 
-        .topnav .logo {
+       .topnav.logo {
             font-weight: bold;
             font-size: 24px;
         }
 
-        .topnav a:nth-child(2),
-        .topnav a:nth-child(3),
-        .topnav a:nth-child(4),
-        .topnav a:nth-child(5) {
+       .topnav a:nth-child(2),
+       .topnav a:nth-child(3),
+       .topnav a:nth-child(4),
+       .topnav a:nth-child(5) {
             margin-left: auto;
         }
 
-        .main-content {
+       .main-content {
             min-height: 100vh;
             padding: 20px;
         }
 
-        .my-works-button {
+       .my-works-button {
             background-color: #333;
             color: #959595;
             padding: 10px 20px;
@@ -52,7 +53,7 @@
             text-decoration: none;
         }
 
-        .my-works-button:hover {
+       .my-works-button:hover {
             transform: scale(1.05);
         }
 
@@ -64,10 +65,58 @@
             transform: scale(1.1);
         }
 
-        .topnav a:hover {
+       .topnav a:hover {
             transform: scale(1.1);
+        }      
+
+       .dropdown {
+            position: relative;
+            display: inline-block;
         }
-        
+
+       .dropdown-content {
+            display: none;
+            position: absolute;
+            right: 0px;
+            background-color: #fff;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+
+       .dropdown-content a {
+            color: #fff;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            background-color: #333;
+        }
+
+       .dropdown-content a:hover {
+            background-color: #555;
+        }
+
+       .show {
+            display: block;
+        }
+
+       .dropdown-container {
+            position: absolute;
+            right: 0px;
+            top: 7px
+        }
+
+        @media (max-width: 768px) {
+          .dropdown-content {
+                display: none;
+    position: absolute;
+    background-color: #fff;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    left: -100px; /* Adjust this value as needed */
+            }
+        }
     </style>
 </head>
 <body>
@@ -77,6 +126,20 @@
         <a href="#my work" class="my-works-button">My Works</a>
         <a href="https://www.linkedin.com/in/aryan-kumar-029abb289?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank">LinkedIn</a>
         <a href="#discord">Discord</a>
+    </div>
+    <div class="dropdown-container">
+        <div class="dropdown">
+            <button class="dropbtn">&#9776;</button>
+            <div class="dropdown-content">
+                <a href="#">My Resume</a>
+                <a href="#">My Clicks</a>
+                <a href="#">About Me</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <!-- Content here -->
     </div>
 
     <div class="main-content">
@@ -112,7 +175,15 @@
         
         <br>
         <br>
-        <hr>
+        <hr><!-- Main content here -->
     </div>  
+
+    <script>
+        const dropdown = document.querySelector('.dropdown');
+        const dropdownContent = document.querySelector('.dropdown-content');
+        dropdown.addEventListener('click', () => {
+            dropdownContent.classList.toggle('show');
+        });
+    </script>
 </body>
 </html>
